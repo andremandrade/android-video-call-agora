@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/start_call_button"
+            android:layout_weight=".50"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Start"
+            android:textSize="10dp"
+             android:layout_width="0dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/screen_share_button"
+            android:layout_width="0dp"
+            android:layout_weight=".50"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Share Screen"
+            android:textSize="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/local_stats"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="Local Video Stats"
+                android:textColor="@color/white"
+                android:textSize="4pt"
+                android:background="@color/purple_500"
+                android:visibility="visible"
+                android:paddingLeft="20dp"/>
+            <FrameLayout
+                android:id="@+id/local_video_view_container"
+                android:layout_width="256dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+            </FrameLayout>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/remote_stats"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:maxLines="9"
+            android:text="Local Video Stats"
+            android:textColor="@color/white"
+            android:background="@color/purple_500"
+            android:textSize="4pt"
+            android:visibility="visible"
+            android:padding="5dp"/>
+            />
+    <FrameLayout
+        android:id="@+id/remote_video_view_container"
+        android:layout_width="256dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+    </FrameLayout>
+    </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
