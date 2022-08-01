@@ -1,0 +1,6 @@
+services:
+
+  andre-video-server:
+    build: .
+    ports:
+       - "80:3000"
